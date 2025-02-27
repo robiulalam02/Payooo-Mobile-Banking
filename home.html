@@ -16,6 +16,9 @@
       body {
         font-family: "Outfit", serif;
       }
+      #cash-out-section{
+        display: none;
+      }
     </style>
   </head>
   <body class="bg-slate-800">
@@ -66,12 +69,14 @@
           </p>
           <div class="grid grid-cols-3 gap-4">
             <div
+              id="add-money"
               class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
             >
               <img src="assets/purse1.png" alt="" />
               <p class="text-gray-500">Add Money</p>
             </div>
             <div
+              id="cash-out"
               class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
             >
               <img src="assets/send1.png" alt="" />
@@ -105,7 +110,7 @@
         </div>
       </section>
 
-      <section class="px-5 py-8">
+      <section id="add-money-section" class="px-5 py-8">
         <h3 class="mb-4 text-lg font-semibold">Add Money</h3>
 
         <div class="w-full p-6 bg-white shadow-2xl rounded-3xl">
@@ -163,8 +168,58 @@
           </div>
         </div>
       </section>
+
+
+      <section id="cash-out-section" class="px-5 py-8">
+        <h3 class="mb-4 text-lg font-semibold">Cash Out</h3>
+
+        <div class="w-full p-6 bg-white shadow-2xl rounded-3xl">
+          <div class="card-body">
+            <fieldset class="flex flex-col gap-2 fieldset">
+              <label
+                class="w-full mt-2 font-semibold text-gray-600 fieldset-label"
+                >Agent Account Number</label
+              >
+              <input
+                id="acount-number"
+                type="number"
+                class="w-full px-4 py-6 bg-gray-100 border-0 h-14 input rounded-3xl"
+                placeholder="Enter Account Number"
+              />
+              <label
+                class="w-full mt-2 font-semibold text-gray-600 fieldset-label"
+                >Amount to Add</label
+              >
+              <input
+                id="cash-out-amount"
+                type="number"
+                class="w-full px-4 py-6 bg-gray-100 border-0 h-14 input rounded-3xl"
+                placeholder="Enter Amount"
+              />
+              <label
+                class="w-full mt-2 font-semibold text-gray-600 fieldset-label"
+                >Pin Number</label
+              >
+              <input
+                id="pin"
+                type="password"
+                class="w-full px-4 py-6 bg-gray-100 border-0 h-14 input rounded-3xl"
+                placeholder="Enter Pin"
+              />
+              <button
+                class="w-full py-2 mt-4 text-xl font-medium text-white bg-blue-600 border-0 shadow-none btn rounded-3xl btn-neutral"
+                id="cash-out-btn"
+              >
+                Cash Out   
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <script src="home.js"></script>
+    <script src="cash-out.js"></script>
   </body>
 </html>
