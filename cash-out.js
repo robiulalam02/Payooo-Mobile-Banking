@@ -2,13 +2,11 @@ document
   .getElementById("cash-out-btn")
   .addEventListener("click", function (event) {
     event.preventDefault;
-
+  
     const agentAccount = document.getElementById("acount-number");
     const cashOutAmount = document.getElementById("cash-out-amount");
-    const convertedAmount = parseFloat(cashOutAmount.value);
+    const convertedAmount = makeInteger("cash-out-amount");
     const accountPin = document.getElementById("pin");
-    const balance = document.getElementById("balance").innerText;
-    const numericBalance = parseFloat(balance);
 
     // alert(typeof(numericBalance))
 
@@ -16,11 +14,10 @@ document
       agentAccount.value.length === 11 &&
       agentAccount.value !== "" &&
       accountPin.value !== "" &&
-      cashOutAmount.value !== ""
+      cashOutAmount.value >= 50
     ) {
       // alert("good");
-      const totalBalance = numericBalance - convertedAmount;
-      document.getElementById("balance").innerText = totalBalance;
+      document.getElementById("balance").innerText = finalBalance("balance", convertedAmount);
       alert("cash out Successful");
     } else if (agentAccount.value.length < 11 || agentAccount.value === "") {
       alert("please input correct agent number");
@@ -29,6 +26,13 @@ document
     } else if (accountPin.value === "") {
       alert("input pin");
     } else {
-      alert("cash out unseccessful")
+      alert("cash out unseccessful");
     }
   });
+
+  document.getElementById("add-money").addEventListener('click', function(){
+    addClass("add-money", "cash-out");
+  })
+  document.getElementById("cash-out").addEventListener('click', function(){
+    addClass("cash-out", "add-money");
+  })

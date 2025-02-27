@@ -19,6 +19,10 @@
       #cash-out-section{
         display: none;
       }
+      .options{
+        border: 1px solid #0875f2;
+        background-color: #0874f20d;
+      }
     </style>
   </head>
   <body class="bg-slate-800">
@@ -70,41 +74,41 @@
           <div class="grid grid-cols-3 gap-4">
             <div
               id="add-money"
-              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/purse1.png" alt="" />
               <p class="text-gray-500">Add Money</p>
             </div>
             <div
               id="cash-out"
-              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/send1.png" alt="" />
-              <p class="text-gray-500">Cash Out</p>
+              <p id=-title2" class="text-gray-500">Cash Out</p>
             </div>
             <div
-              class="flex flex-col items-center justify-center h-24 gap-2 text-center border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 text-center border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/money1.png" alt="" />
-              <p class="text-gray-500">Transfer Money</p>
+              <p id=-title3" class="text-gray-500">Transfer Money</p>
             </div>
             <div
-              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/bonus1.png" alt="" />
-              <p class="text-gray-500">Get Bonus</p>
+              <p id=-title4" class="text-gray-500">Get Bonus</p>
             </div>
             <div
-              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/wallet1.png" alt="" />
-              <p class="text-gray-500">Pay Bill</p>
+              <p id=-title5" class="text-gray-500">Pay Bill</p>
             </div>
             <div
-              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg"
+              class="flex flex-col items-center justify-center h-24 gap-2 border border-gray-300 rounded-lg hover:border-[#0875f2] hover:bg-[#0874f20d]"
             >
               <img src="assets/transaction1.png" alt="" />
-              <p class="text-gray-500">Transactions</p>
+              <p id="options-title6" class="text-gray-500">Transactions</p>
             </div>
           </div>
         </div>
@@ -219,6 +223,7 @@
 
     </main>
 
+    <script src="function.js"></script>
     <script src="home.js"></script>
     <script src="cash-out.js"></script>
   </body>
